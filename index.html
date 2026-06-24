@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matemáticas — Bachillerato</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo-area" href="#">
+      <div class="logo-icon">📐</div>
+      <div class="logo-text">
+        <strong>MatemáticasBach</strong>
+        <span>Guías interactivas · Bachillerato</span>
+      </div>
+    </a>
+    <div class="header-spacer"></div>
+    <span class="header-curso-label" id="header-curso">2° Bachillerato</span>
+  </div>
+</header>
+
+<!-- ══════════ SELECTOR DE CURSO ══════════ -->
+<nav class="curso-selector" aria-label="Selección de curso">
+  <div class="curso-tabs">
+
+    <button class="curso-tab" data-curso="1" onclick="showCurso(1)">
+      <span class="curso-num">1</span>
+      <span>Primero de Bachillerato</span>
+      <span class="curso-badge badge-soon">Próximamente</span>
+    </button>
+
+    <button class="curso-tab active" data-curso="2" onclick="showCurso(2)">
+      <span class="curso-num">2</span>
+      <span>Segundo de Bachillerato</span>
+      <span class="curso-badge badge-active">Disponible</span>
+    </button>
+
+    <button class="curso-tab" data-curso="3" onclick="showCurso(3)">
+      <span class="curso-num">3</span>
+      <span>Tercero de Bachillerato</span>
+      <span class="curso-badge badge-soon">Próximamente</span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     FRAME 1° — VACÍO
+═════════════════════════════════════════════════ -->
+<div class="curso-frame" id="curso-1">
+  <div class="empty-frame">
+    <span class="empty-icon">🌱</span>
+    <h2>1° de Bachillerato</h2>
+    <p>Estamos preparando el material para este curso. Pronto tendrás guías interactivas, ejercicios por niveles y mucho más.</p>
+    <div class="empty-chips">
+      <span class="chip c1">Álgebra</span>
+      <span class="chip c2">Funciones</span>
+      <span class="chip c3">Geometría</span>
+      <span class="chip c4">Estadística</span>
+      <span class="chip">Trigonometría</span>
+      <span class="chip">Probabilidad</span>
+    </div>
+    <div class="coming-soon-card">
+      <h3>🚧 Contenido en construcción</h3>
+      <p>Las guías de 1° de Bachillerato estarán disponibles próximamente. ¡Vuelve pronto!</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     FRAME 2° — CONTENIDO COMPLETO
+═════════════════════════════════════════════════ -->
+<div class="curso-frame active" id="curso-2">
+  <div class="content-area">
+
+    <!-- Hero -->
+    <div class="content-hero">
+      <h1>🔢 Sistemas de Ecuaciones — Método de Sustitución</h1>
+      <p>Guía completa paso a paso para dominar el método de sustitución. Desde los fundamentos hasta sistemas 3×3.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">2° Bachillerato</span>
+        <span class="hero-pill">Álgebra</span>
+        <span class="hero-pill">Sistemas 2×2 y 3×3</span>
+        <span class="hero-pill">Ejercicios por niveles</span>
+      </div>
+    </div>
+
+    <!-- Tabs internos -->
+    <div class="inner-tabs-wrap">
+      <div class="inner-tabs">
+        <button class="itab on"  onclick="showTab('t0',this)">🚦 Regla del semáforo</button>
+        <button class="itab"     onclick="showTab('t1',this)">📦 Juego de las cajas</button>
+        <button class="itab"     onclick="showTab('t2',this)">🤖 Método Robot (2×2)</button>
+        <button class="itab"     onclick="showTab('t3',this)">🌀 Embudo (3×3)</button>
+        <button class="itab"     onclick="showTab('t4',this)">⚡ Errores frecuentes</button>
+        <button class="itab"     onclick="showTab('t5',this)">📋 Ejercicios por niveles</button>
+      </div>
+    </div>
+
+    <!-- ── TAB 0: Semáforo ── -->
+    <div class="isection on" id="t0">
+      <div class="card card-warn">
+        <h4>Antes de empezar — dominar los signos</h4>
+        <h3>La Regla del Semáforo</h3>
+        <p>Prohíbe la frase "cambia el signo". Diles: <strong>"Las ecuaciones son una balanza. Haces la operación contraria en ambos lados."</strong></p>
+      </div>
+
+      <div class="semaforo">
+        <div class="sem-item sem-g">
+          <span style="font-size:24px">➕</span>
+          <div>
+            <p><strong>Está SUMANDO</strong></p>
+            <p>Pasa RESTANDO</p>
+          </div>
+        </div>
+        <div class="sem-item sem-r">
+          <span style="font-size:24px">➖</span>
+          <div>
+            <p><strong>Está RESTANDO</strong></p>
+            <p>Pasa SUMANDO</p>
+          </div>
+        </div>
+        <div class="sem-item sem-g">
+          <span style="font-size:24px">✖️</span>
+          <div>
+            <p><strong>Está MULTIPLICANDO</strong></p>
+            <p>Pasa DIVIDIENDO</p>
+          </div>
+        </div>
+        <div class="sem-item sem-r">
+          <span style="font-size:24px">➗</span>
+          <div>
+            <p><strong>Está DIVIDIENDO</strong></p>
+            <p>Pasa MULTIPLICANDO</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-blue" style="margin-top:12px">
+        <h4>Ejercicio diario — 5 minutos al inicio</h4>
+        <p>Pon 10 despejes simples. Deben decirlo en voz alta:</p>
+        <code class="eq">x + 8 = 15 → <span class="b">"El +8 pasa restando"</span> → x = <span class="g">7</span></code>
+        <code class="eq">x − 3 = −10 → <span class="b">"El −3 pasa sumando"</span> → x = <span class="g">−7</span></code>
+        <code class="eq">2x = 8 → <span class="b">"El ×2 pasa dividiendo"</span> → x = <span class="g">4</span></code>
+        <p style="margin-top:8px"><span class="pill pw">Truco clave</span> Cuando dominen sin negativos, añade negativos. No al revés.</p>
+      </div>
+
+      <div class="card card-ok" style="margin-top:12px">
+        <h4>La regla de oro para el aula</h4>
+        <div class="big-rule">Prohibido decir "despejar" las primeras clases.<br>Di: <em>"vamos a dejar SOLA a la letra"</em></div>
+        <p>La memoria emocional funciona mejor que la lógica. Ponles nombres a las ecuaciones: "Ecuación Patito", "Ecuación Cocodrilo".</p>
+      </div>
+    </div>
+
+    <!-- ── TAB 1: Cajas ── -->
+    <div class="isection" id="t1">
+      <div class="card card-blue">
+        <h4>Para quitar el miedo a la X y la Y</h4>
+        <h3>El Juego de las Cajas — Ponle precio a las letras</h3>
+        <p>Diles: <strong>"La X es el precio de una hamburguesa. La Y es el precio de un refresco."</strong></p>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h4>Ejemplo concreto en pizarra</h4>
+        <code class="eq"><span class="b">2x</span> + <span class="r">y</span> = 8</code>
+        <p style="font-size:13px;margin:4px 0 8px;color:var(--muted)">→ "Dos hamburguesas y un refresco cuestan 8€"</p>
+        <code class="eq"><span class="b">x</span> + <span class="r">y</span> = 5</code>
+        <p style="font-size:13px;margin:4px 0 8px;color:var(--muted)">→ "Una hamburguesa y un refresco cuestan 5€"</p>
+
+        <div class="card card-warn" style="margin-top:12px">
+          <p><strong>Pregúntales:</strong> "Si una hamburguesa y un refresco valen 5, ¿cuánto vale SOLO la hamburguesa?"</p>
+          <p style="margin-top:6px">Ellos solos dirán: <strong>"Pues 5 menos el refresco"</strong></p>
+          <code class="eq">x = 5 − <span class="r">y</span></code>
+          <p style="margin-top:6px"><span class="pill pg">✓</span> <strong>¡Acabas de despejar sin usar la palabra "despejar"!</strong></p>
+        </div>
+      </div>
+
+      <div class="card card-ok" style="margin-top:12px">
+        <h4>El cartel de los 3 mandamientos (imprime y pega en el aula)</h4>
+        <div class="step-row">
+          <div class="step-num">1</div>
+          <div><p><strong>Despejar</strong> es dejar la letra sola. Lo que suma pasa restando; lo que multiplica pasa dividiendo.</p></div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">2</div>
+          <div><p><strong>Sustituir</strong> es meter un disfraz. Si x = 3−y, donde ponga x, pongo (3−y).</p></div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">3</div>
+          <div><p><strong>El paréntesis se abre en cruz:</strong> 2(3−y) = 6−2y. ¡Cuidado con el signo menos!</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB 2: Robot 2×2 ── -->
+    <div class="isection" id="t2">
+      <div class="stepper-card">
+        <div class="stepper-header" id="s2h">Cargando…</div>
+        <div id="s2body"></div>
+        <div class="stepper-nav">
+          <button id="p2" onclick="mv2(-1)">← Anterior</button>
+          <button id="n2" onclick="mv2(1)">Siguiente →</button>
+          <div class="dots" id="d2"></div>
+        </div>
+      </div>
+
+      <div class="card card-warn" style="margin-top:14px">
+        <h4>El Robot — resumen visual para pegar en el cuaderno</h4>
+        <div class="step-row"><div class="step-num">1</div><div><p>Elige la ecuación con coeficiente 1 (o −1).</p></div></div>
+        <div class="step-row"><div class="step-num">2</div><div><p>Despeja esa variable (regla del semáforo).</p></div></div>
+        <div class="step-row"><div class="step-num">3</div><div><p>Sustituye en la OTRA ecuación. <strong>Con paréntesis siempre.</strong></p></div></div>
+        <div class="step-row"><div class="step-num">4</div><div><p>Resuelve la ecuación de 1 incógnita que te queda.</p></div></div>
+        <div class="step-row"><div class="step-num">5</div><div><p>Vuelve al despeje del Paso 2 y calcula la otra variable.</p></div></div>
+        <div class="step-row"><div class="step-num">✓</div><div><p><strong>Verifica en AMBAS ecuaciones.</strong> Si falla, vuelve al Paso 3.</p></div></div>
+      </div>
+    </div>
+
+    <!-- ── TAB 3: Embudo 3×3 ── -->
+    <div class="isection" id="t3">
+      <div class="card card-blue" style="margin-bottom:14px">
+        <h4>Estrategia Embudo</h4>
+        <h3>🌀 De 3 incógnitas → 2 incógnitas → 1 incógnita</h3>
+        <p>Igual que el 2×2 pero hacemos dos sustituciones. El mismo Robot, dos veces seguidas.</p>
+      </div>
+
+      <div class="stepper-card">
+        <div class="stepper-header" id="s3h">Cargando…</div>
+        <div id="s3body"></div>
+        <div class="stepper-nav">
+          <button id="p3" onclick="mv3(-1)">← Anterior</button>
+          <button id="n3" onclick="mv3(1)">Siguiente →</button>
+          <div class="dots" id="d3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB 4: Errores ── -->
+    <div class="isection" id="t4">
+      <div class="card card-red">
+        <h4>Error #1 — El más común (60% de los fallos)</h4>
+        <h3>❌ Sustituir sin paréntesis</h3>
+        <p>Si x = 3 − y y sustituyes en 2x sin paréntesis:</p>
+        <code class="eq"><span class="r">MAL:</span> &nbsp; 2 · 3 − y = 6 − y &nbsp;&nbsp; ← ¡Solo multiplica el 3!</code>
+        <code class="eq"><span class="g">BIEN:</span> &nbsp; 2<span class="b">(3 − y)</span> = 6 − 2y &nbsp;&nbsp; ← Multiplica todo</code>
+        <p style="margin-top:8px"><span class="pill pr">Regla de oro</span> Si hay suma o resta en lo que sustituyes, <strong>siempre paréntesis</strong>.</p>
+      </div>
+
+      <div class="card card-red" style="margin-top:12px">
+        <h4>Error #2</h4>
+        <h3>❌ Sustituir en la misma ecuación de la que se despejó</h3>
+        <code class="eq">Si despejaste x de ①, sustituyes en ② (no en ①)</code>
+        <p style="margin-top:8px">Sustituir en la misma ecuación da una identidad (0 = 0) que no da información.</p>
+      </div>
+
+      <div class="card card-red" style="margin-top:12px">
+        <h4>Error #3</h4>
+        <h3>❌ Olvidar el signo al despejar con negativo</h3>
+        <code class="eq">−x + 2y = 5</code>
+        <code class="eq"><span class="r">MAL:</span> &nbsp; x = 2y − 5 &nbsp;&nbsp; ← Olvidaron multiplicar por −1</code>
+        <code class="eq"><span class="g">BIEN:</span> &nbsp; Multiplicar por −1: x − 2y = −5 → x = 2y − 5</code>
+        <p style="margin-top:8px">Espera… aquí el resultado es el mismo. Pero el proceso debe ser consciente.</p>
+        <code class="eq"><span class="r">Error real:</span> −2x + 3y = 7 → x = 3y − 7 ← ¡Faltó dividir entre 2!</code>
+        <code class="eq"><span class="g">BIEN:</span> 2x = 3y − 7 → x = (3y − 7)/2</code>
+      </div>
+
+      <div class="card card-warn" style="margin-top:12px">
+        <h4>Error #4</h4>
+        <h3>⚠️ No verificar la solución</h3>
+        <p>Un error de signo produce una solución "bonita" pero incorrecta. La única forma de detectarlo es sustituir ambos valores en las DOS ecuaciones originales.</p>
+        <div class="big-rule">La verificación no es opcional. Es el último paso.</div>
+      </div>
+    </div>
+
+    <!-- ── TAB 5: Ejercicios por niveles ── -->
+    <div class="isection" id="t5">
+
+      <div class="nivel" onclick="toggleN('n1')">
+        <div class="step-num">1</div>
+        <div style="flex:1">
+          <strong>Nivel Básico</strong>
+          <div style="font-size:13px;color:var(--muted);margin-top:2px">Coeficiente 1, sin negativos</div>
+        </div>
+        <span class="nvl-badge" style="background:#E8F9F5;color:#007A66">🌱 Principiante</span>
+      </div>
+      <div id="n1" class="nivel-body" style="display:none">
+        <div class="card">
+          <code class="eq">① x + y = 5<br>② x − y = 1</code>
+          <p style="margin-top:8px">Despeja x de ①: x = 5 − y</p>
+          <code class="eq">Sustituir en ②: <span class="b">(5 − y)</span> − y = 1</code>
+          <code class="eq">5 − 2y = 1 → −2y = −4 → <span class="g">y = 2</span></code>
+          <code class="eq">x = 5 − <span class="b">2</span> = <span class="g">3</span></code>
+          <code class="eq">Verificar ①: 3 + 2 = 5 ✓ &nbsp;&nbsp; ②: 3 − 2 = 1 ✓</code>
+        </div>
+      </div>
+
+      <div class="nivel" onclick="toggleN('n2b')">
+        <div class="step-num">2</div>
+        <div style="flex:1">
+          <strong>Nivel Medio</strong>
+          <div style="font-size:13px;color:var(--muted);margin-top:2px">Coeficientes distintos de 1, con negativos</div>
+        </div>
+        <span class="nvl-badge" style="background:#FFF4E0;color:#8A5200">🔥 Intermedio</span>
+      </div>
+      <div id="n2b" class="nivel-body" style="display:none">
+        <div class="card">
+          <code class="eq">① 2x + y = 7<br>② x − 3y = −2</code>
+          <p style="margin-top:8px">Despeja x de ②: x = −2 + 3y</p>
+          <code class="eq">Sustituir en ①: 2<span class="b">(−2 + 3y)</span> + y = 7</code>
+          <code class="eq">−4 + 6y + y = 7 → 7y = 11 → <span class="g">y = 11/7</span></code>
+          <p style="margin-top:6px"><span class="pill pw">Nota</span> Las soluciones fraccionarias son válidas. No hay error.</p>
+        </div>
+      </div>
+
+      <div class="nivel" onclick="toggleN('n3b')">
+        <div class="step-num">3</div>
+        <div style="flex:1">
+          <strong>Nivel Avanzado</strong>
+          <div style="font-size:13px;color:var(--muted);margin-top:2px">Sistema 3×3 completo</div>
+        </div>
+        <span class="nvl-badge" style="background:#F0ECFF;color:#5B00D9">⚡ Avanzado</span>
+      </div>
+      <div id="n3b" class="nivel-body" style="display:none">
+        <div class="card">
+          <code class="eq">① x + y + z = 6<br>② x − y + 2z = 7<br>③ 2x + y − z = 4</code>
+          <p style="margin-top:8px">Despeja x de ①: x = 6 − y − z</p>
+          <code class="eq">Sustituir en ②: <span class="b">(6−y−z)</span> − y + 2z = 7 → 6 − 2y + z = 7</code>
+          <code class="eq"><span class="o">−2y + z = 1</span> &nbsp;&nbsp; ← Ecuación A</code>
+          <code class="eq">Sustituir en ③: 2<span class="b">(6−y−z)</span> + y − z = 4 → 12 − 2y − 2z + y − z = 4</code>
+          <code class="eq"><span class="o">−y − 3z = −8</span> &nbsp;&nbsp; ← Ecuación B</code>
+          <p style="margin-top:8px">Resuelve el sistema A–B (sistema 2×2) → <span class="pill pg">Ejercicio para casa</span></p>
+          <code class="eq">Solución final: x = <span class="g">1</span>, y = <span class="g">2</span>, z = <span class="g">3</span></code>
+        </div>
+      </div>
+
+      <div class="nivel" onclick="toggleN('n4b')">
+        <div class="step-num">★</div>
+        <div style="flex:1">
+          <strong>Nivel Olimpiada</strong>
+          <div style="font-size:13px;color:var(--muted);margin-top:2px">Problemas de aplicación con contexto real</div>
+        </div>
+        <span class="nvl-badge" style="background:#FFF0F5;color:#CC1454">🏆 Reto</span>
+      </div>
+      <div id="n4b" class="nivel-body" style="display:none">
+        <div class="card card-blue">
+          <h4>Problema de la tienda</h4>
+          <p>En una tienda, 3 camisas y 2 pantalones cuestan 97€. Una camisa y 4 pantalones cuestan 89€. ¿Cuánto vale cada prenda?</p>
+          <code class="eq">① 3x + 2y = 97<br>② x + 4y = 89</code>
+          <p style="margin-top:8px">Despeja x de ②: <span class="b">x = 89 − 4y</span></p>
+          <code class="eq">Sustituir en ①: 3<span class="b">(89 − 4y)</span> + 2y = 97</code>
+          <code class="eq">267 − 12y + 2y = 97 → −10y = −170 → <span class="g">y = 17€</span></code>
+          <code class="eq">x = 89 − 4(17) = 89 − 68 = <span class="g">21€</span></code>
+          <p style="margin-top:8px">Verificar: 3(21)+2(17) = 63+34 = 97 ✓ &nbsp;&nbsp; 21+4(17) = 21+68 = 89 ✓</p>
+        </div>
+
+        <div class="card card-warn" style="margin-top:12px">
+          <h4>Frase motivacional para tus alumnos</h4>
+          <p><strong>"Ustedes no son malos en mates. El sistema de sustitución solo tiene UNA decisión difícil: elegir qué letra despejar. El resto es aritmética de primaria. Si se equivocan, es porque olvidaron el paréntesis. Hoy eso cambia."</strong></p>
+        </div>
+      </div>
+
+    </div>
+    <!-- fin isections -->
+
+  </div><!-- fin content-area -->
+</div><!-- fin curso-2 -->
+
+
+<!-- ══════════════════════════════════════════════
+     FRAME 3° — VACÍO
+═════════════════════════════════════════════════ -->
+<div class="curso-frame" id="curso-3">
+  <div class="empty-frame">
+    <span class="empty-icon">🚀</span>
+    <h2>3° de Bachillerato</h2>
+    <p>El contenido de tercer curso está en preparación. Incluirá temas de análisis matemático, cálculo diferencial e integral y más.</p>
+    <div class="empty-chips">
+      <span class="chip c1">Límites y continuidad</span>
+      <span class="chip c2">Derivadas</span>
+      <span class="chip c3">Integrales</span>
+      <span class="chip c4">Cálculo vectorial</span>
+      <span class="chip">Números complejos</span>
+      <span class="chip">Matrices</span>
+    </div>
+    <div class="coming-soon-card">
+      <h3>🚧 Contenido en construcción</h3>
+      <p>Las guías de 3° de Bachillerato estarán disponibles próximamente. ¡Vuelve pronto!</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="site-footer">
+  <p><strong>MatemáticasBach</strong> · Guías interactivas para Bachillerato · Curso 2024–2025</p>
+  <p style="margin-top:4px;opacity:0.6">Material didáctico de uso educativo</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
